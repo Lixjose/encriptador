@@ -1,0 +1,343 @@
+body
+{
+    background: #F3F5FC;
+}
+
+.contenedor
+{
+    width: 90%;
+    max-width: 1800px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+}
+
+.logo
+{
+    grid-column: 1;
+    margin: 20px;
+}
+
+.ingresotext
+{
+    grid-column: 1/3;
+    grid-row: 2;
+
+    color: #0A3871;
+    font-size: 30px;
+    font-style: normal;
+    font-family:'Inter';
+    border: none;
+    text-transform: lowercase;
+    background: none;
+    resize: none;
+    margin: 45px;
+}
+
+.ingresotext:hover
+{
+    border: none;
+    color: #0A3871;
+    border-color: #F3F5FC;
+    cursor: pointer;
+    background: none;
+}
+
+.ingresotext:focus
+{
+    outline: none;
+    background: none;
+}
+
+.salida
+{
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.rectangulo
+{
+    height: 650px;
+    background: rgb(255, 255, 255);
+    border-radius: 5%;  
+    
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-template-rows: auto 60px 40px auto;
+}
+
+.no-encontrado, .salidaTxt 
+{
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.no-encontrado
+{
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+    margin: 0 0 0px 65px;
+}
+
+.salidaTxt
+{
+    width: 445px;
+    height: 430px;
+    grid-row: 1/4;
+
+    color: #0A3871;
+    font-size: 20px;
+    font-family:'Inter';
+    text-transform: lowercase;
+    text-align: justify;
+    resize: none;
+    border: none;
+    background: none;
+    padding: 10px;
+}
+
+.salidaTxt:hover, :focus
+{
+    background: none;
+}
+
+.textnot
+{
+    grid-row: 2;
+    grid-column: 1;
+
+    font-size: 22px;
+}
+
+.text2
+{
+    grid-row: 3;
+    grid-column: 1;
+
+    padding: 5px;
+}
+
+.text2:hover
+{
+    cursor: pointer;
+}
+
+.copiar
+{
+    grid-row: 4;
+    grid-column: 1;
+
+    width: 200px;
+    height: 67px;
+    margin: 0px 0px 0px 140px;
+}
+
+.interaccion
+{
+    grid-column: 1/3;
+    grid-row: 3;
+
+    margin: 20px;
+}
+
+.botones
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    justify-content: center;
+}
+
+button
+{
+    border-radius: 24px;
+    padding: 24px;
+    border-color: #0A3871;
+}
+
+button:hover
+{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#encriptar
+{
+    grid-column: 1;
+    grid-row: 1;
+    background: #0A3871;
+    color: #F3F5FC;
+}
+
+#desencriptador
+{
+    color: #0A3871;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+@media screen and (max-width: 1300px) 
+{
+    .contenedor
+    {
+        grid-gap: 10px;
+    }
+
+    .ingresotext
+    {
+        font-size: 20px;
+    }
+
+    .rectangulo
+    {
+        height: 560px;
+    }
+
+    .salidaTxt
+    {
+        height: 360px;
+        font-size: 18px;
+    }
+
+    .no-encontrado
+    {
+        height: 250px;
+    }
+    
+}
+
+@media screen and (max-width: 1200px)
+{
+    .ingresotext
+    {
+        grid-column: 1/4;
+        grid-row: 2;
+        max-height: 360px;
+    }
+
+    .salida 
+    {
+        grid-column: 1/4;
+        grid-row: 4;
+    }
+
+    .salidaTxt
+    {
+        width: 1000px;
+        height: 480px;
+    }
+
+    .no-encontrado
+    {
+        margin-left: 340px;
+    }
+
+    .copiar
+    {
+        margin-left: 410px;
+    }
+
+    .interaccion
+    {
+        grid-column: 1/4;
+        grid-row: 3;
+    }
+}
+
+@media screen and (max-width: 1000px)
+{
+    .ingresotext
+    {
+        max-height: 360px;
+    }
+
+    .salida 
+    {
+        max-width: 865px;
+    }
+}
+
+@media screen and (max-width: 900px)
+{
+
+    .salida 
+    {
+        max-width: 810px;
+    }
+
+    .salidaTxt
+    {
+        width: 1000px;
+        height: 480px;
+    }
+}
+
+@media screen and (max-width: 860px)
+{
+    .salida 
+    {
+        max-width: 710px;
+    }
+}
+
+@media screen and (max-width: 730px)
+{
+    .salida 
+    {
+        max-width: 610px;
+    }
+}
+
+@media screen and (max-width: 610px)
+{
+    .salida 
+    {
+        max-width: 510px;
+    }
+}
+
+@media screen and (max-width: 550px)
+{
+    .salida 
+    {
+        max-width: 410px;
+    }
+}
+
+@media screen and (max-width: 440px)
+{
+    .salida 
+    {
+        max-width: 380px;
+    }
+}
+
+@media screen and (max-width: 380px)
+{
+    .salida 
+    {
+        max-width: 310px;
+    }
+
+    .botones
+    {
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    #encriptar
+    {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #desencriptador
+    {
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
