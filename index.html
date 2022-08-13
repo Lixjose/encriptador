@@ -159,7 +159,7 @@
                     </svg>
                     <p class="textnot" id="p-no-encontrado">Ningún texto fue encontrado</p>
                     <p class="text2" id="texto-no-encontrado" onclick="focustxt()">Ingrese el texto que desees encriptar o desencriptar</p>
-                    <button class="copiar" id="boton-copiar" onclick="copy()" form="txtSalida">Copiar</button>
+                    <button class="copiar" id="boton-copiar" onclick="copy()">Copiar</button>
                     </div>
                 </div>
     
@@ -182,7 +182,8 @@
     document.getElementById("boton-copiar").style.visibility = "hidden";
     document.getElementById("txtSalida").style.visibility = "hidden";
     const txt = document.getElementById("textingresado");
-    const txtSalida = document.getElementById("txtSalida");
+    const txtSalida = document.querySelector("#txtSalida");
+    const botonCopy = document.querySelector("#boton-copiar");
     txt.value = "";
 
     function encriptador() 
@@ -200,6 +201,7 @@
         txt.focus();
 
         txtSalida.value = encriptado;
+        txt.value = "";
     }
 
     function desencriptar()
@@ -222,5 +224,11 @@
     function focustxt()
     {
         txt.focus()
+    }
+
+    function copy()
+    {
+        let textACopiar = txtSalida.value;
+        navigator.clipboard.writeText(textACopiar);
     }
 </script>
