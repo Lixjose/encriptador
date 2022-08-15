@@ -11,7 +11,7 @@
     <body>
         <main>
             <div class="contenedor">
-                <img src="Recursos/logo alura.png" class="logo">
+                <img src="Recursos/logo alura.png" class="logo" onclick="info()">
                 
                 <textarea class="ingresotext" id="textingresado" placeholder="Ingrese el texto aqui" autofocus cols="30" rows="15" autocapitalize="none"></textarea>
     
@@ -176,6 +176,13 @@
             </div>
         </main>
     </body>
+
+    <div class="mensaje" id="mensaje" onclick="cerrar()">
+        <p>Pagina realizada para el challege de ONE y alura</p>
+        <p>Grupo 3</p>
+        <p>Hecha por José Lix</p>
+    </div>
+
 </html>
 
 <script>
@@ -184,6 +191,7 @@
     const txt = document.getElementById("textingresado");
     const txtSalida = document.querySelector("#txtSalida");
     const botonCopy = document.querySelector("#boton-copiar");
+    document.getElementById("mensaje").style.visibility = "hidden";
     txt.value = "";
 
     function encriptador() 
@@ -201,7 +209,6 @@
         txt.focus();
 
         txtSalida.value = encriptado;
-        txt.value = "";
     }
 
     function desencriptar()
@@ -230,5 +237,15 @@
     {
         let textACopiar = txtSalida.value;
         navigator.clipboard.writeText(textACopiar);
+    }
+
+    function info()
+    {
+        document.getElementById("mensaje").style.visibility = "visible";
+    }
+
+    function cerrar()
+    {
+        document.getElementById("mensaje").style.visibility = "hidden"
     }
 </script>
